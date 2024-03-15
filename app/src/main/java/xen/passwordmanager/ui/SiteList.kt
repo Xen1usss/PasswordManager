@@ -13,7 +13,6 @@ class SiteList : Fragment() {
     private val binding: ListSiteBinding
         get() = _binding!!
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
