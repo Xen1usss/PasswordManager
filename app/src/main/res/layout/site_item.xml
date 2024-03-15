@@ -38,7 +38,7 @@
             android:id="@+id/bShowPassword"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:text="Show password"
+            android:text="@string/show_password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/picture"
             app:layout_constraintTop_toBottomOf="@+id/password" />
@@ -47,7 +47,7 @@
             android:id="@+id/bEditPassword"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:text="Edit password"
+            android:text="@string/edit_password"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/picture"
