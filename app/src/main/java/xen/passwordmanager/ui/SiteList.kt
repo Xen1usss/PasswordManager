@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import xen.passwordmanager.databinding.ListSiteBinding
 
 class SiteList : Fragment() {
@@ -12,6 +13,7 @@ class SiteList : Fragment() {
     private var _binding: ListSiteBinding? = null // почему var а не val?
     private val binding: ListSiteBinding
         get() = _binding!!
+    private val adapter = SiteAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -20,5 +22,22 @@ class SiteList : Fragment() {
     ): View? {
         _binding = ListSiteBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.rcView.layoutManager = LinearLayoutManager(requireContext())
+        binding.rcView.adapter = adapter
+    }
+
+/*    private fun init(){
+        binding.apply {
+            rcView.layoutManager = LinearLayoutManager(context)
+        }
+    }*/
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

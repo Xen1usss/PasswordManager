@@ -10,7 +10,7 @@ import xen.passwordmanager.domain.SiteCard
 
 class SiteAdapter : RecyclerView.Adapter<SiteAdapter.SiteHolder>() {
 
-    val siteList = ArrayList<SiteCard>() // принципиален ли mutableList? // mutable?
+    val siteCardList = mutableListOf<SiteCard>() // принципиален ли mutableList? // mutable?
 
     class SiteHolder(item: View) : RecyclerView.ViewHolder(item) {
         val binding = SiteItemBinding.bind(item)
@@ -22,17 +22,25 @@ class SiteAdapter : RecyclerView.Adapter<SiteAdapter.SiteHolder>() {
     }
 
     override fun getItemCount(): Int {
-        siteList.size
+        return siteCardList.size
     }
 
     override fun onBindViewHolder(holder: SiteHolder, position: Int) {
-        val siteCard = siteList[position]
+        val siteCard = siteCardList[position]
+        // holder.binding.password.text = SiteCard.password
+        // holder.binding.picture.? = SiteCard.image
     }
 
-    fun setSiteList(siteList: SiteList){ // нужно ли clear?
-        siteList += siteList
+    fun setSiteCardList(dataToSet: List<SiteCard>) {
+        siteCardList.clear() // вопрос про массивы, списки, мут.списки
+        siteCardList += dataToSet // +=?
+        notifyDataSetChanged()
+    }
+
+/*    fun setCardList(siteCard: SiteCard){ // нужно ли clear?
+        siteCard.add(siteCard)
         notifyDataSetChanged()
 
-    }
+    }*/
 
 }
