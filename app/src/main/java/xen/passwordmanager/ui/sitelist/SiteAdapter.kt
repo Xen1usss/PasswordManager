@@ -1,4 +1,4 @@
-package xen.passwordmanager.ui
+package xen.passwordmanager.ui.sitelist
 
 import android.view.LayoutInflater
 import android.view.View

@@ -1,4 +1,4 @@
-package xen.passwordmanager.ui
+package xen.passwordmanager.ui.sitelist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -31,7 +31,7 @@ class SiteListFragment : Fragment() {
         binding.rcView.layoutManager = LinearLayoutManager(requireContext())
         binding.rcView.adapter = adapter
         binding.fab.setOnClickListener{
-            findNavController().navigate(R.id.action_open_dialog)
+            findNavController().navigate(R.id.fragment_create_edit)
         }
     }
 

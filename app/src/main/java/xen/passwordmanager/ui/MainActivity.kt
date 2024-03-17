@@ -1,8 +1,8 @@
-package xen.passwordmanager
+package xen.passwordmanager.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import xen.passwordmanager.ui.SiteListFragment
+import xen.passwordmanager.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

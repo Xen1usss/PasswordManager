@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph_splash"
-    app:startDestination="@id/fragment_test">
+    app:startDestination="@id/fragment_list">
 
     <fragment
-        android:id="@+id/fragment_test"
-        android:name="xen.passwordmanager.ui.SiteListFragment"
+        android:id="@+id/fragment_list"
+        android:name="xen.passwordmanager.ui.sitelist.SiteListFragment"
         android:label="fragment_test"
         tools:layout="@layout/fragment_list_site" />
 
@@ -17,8 +17,14 @@
 
     <dialog
         android:id="@+id/fragment_dialog"
-        android:name="xen.passwordmanager.ui.CreateMasterPasswordDialogFragment"
+        android:name="xen.passwordmanager.ui.createmasterpassword.CreateMasterPasswordDialogFragment"
         android:label="fragment_dialog"
         tools:layout="@layout/dialog_create_master_password" />
+
+    <fragment
+        android:id="@+id/fragment_create_edit"
+        android:name="xen.passwordmanager.ui.createeditpassword.CreateEditPasswordFragment"
+        android:label="fragment_create_edit_password"
+        tools:layout="@layout/fragment_create_edit_password" />
 
 </navigation>

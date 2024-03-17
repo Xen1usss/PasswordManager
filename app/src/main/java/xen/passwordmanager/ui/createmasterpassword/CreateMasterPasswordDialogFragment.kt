@@ -1,4 +1,4 @@
-package xen.passwordmanager.ui
+package xen.passwordmanager.ui.createmasterpassword
 
 import android.os.Bundle
 import android.view.LayoutInflater
