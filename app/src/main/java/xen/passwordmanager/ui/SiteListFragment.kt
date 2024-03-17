@@ -5,13 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import xen.passwordmanager.databinding.ListSiteBinding
+import xen.passwordmanager.R
+import xen.passwordmanager.databinding.FragmentListSiteBinding
 
-class SiteList : Fragment() {
+class SiteListFragment : Fragment() {
 
-    private var _binding: ListSiteBinding? = null // почему var а не val?
-    private val binding: ListSiteBinding
+    private var _binding: FragmentListSiteBinding? = null // почему var а не val?
+    private val binding: FragmentListSiteBinding
         get() = _binding!!
     private val adapter = SiteAdapter()
 
@@ -20,7 +22,7 @@ class SiteList : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = ListSiteBinding.inflate(inflater, container, false)
+        _binding = FragmentListSiteBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -28,6 +30,9 @@ class SiteList : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.rcView.layoutManager = LinearLayoutManager(requireContext())
         binding.rcView.adapter = adapter
+        binding.fab.setOnClickListener{
+            findNavController().navigate(R.id.action_open_dialog)
+        }
     }
 
     override fun onDestroyView() {

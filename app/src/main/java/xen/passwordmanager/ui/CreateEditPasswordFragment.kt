@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import xen.passwordmanager.databinding.FragmentCreateEditPasswordBinding
 
-class CreateEditPassword : Fragment() {
+class CreateEditPasswordFragment : Fragment() {
 
     private var _binding: FragmentCreateEditPasswordBinding? = null
     private val binding: FragmentCreateEditPasswordBinding
