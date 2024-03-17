@@ -30,12 +30,6 @@ class SiteList : Fragment() {
         binding.rcView.adapter = adapter
     }
 
-/*    private fun init(){
-        binding.apply {
-            rcView.layoutManager = LinearLayoutManager(context)
-        }
-    }*/
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
