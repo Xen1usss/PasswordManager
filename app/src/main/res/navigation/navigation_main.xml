@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph_splash"
+    app:startDestination="@id/fragment_list">
+
+    <fragment
+        android:id="@+id/fragment_list"
+        android:name="xen.passwordmanager.ui.sitelist.SiteListFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_list_site" />
+
+    <action
+        android:id="@+id/action_open_dialog"
+        app:destination="@id/fragment_dialog" />
+
+    <dialog
+        android:id="@+id/fragment_dialog"
+        android:name="xen.passwordmanager.ui.createmasterpassword.CreateMasterPasswordDialogFragment"
+        android:label="fragment_dialog"
+        tools:layout="@layout/dialog_create_master_password" />
+
+    <fragment
+        android:id="@+id/fragment_create_edit"
+        android:name="xen.passwordmanager.ui.createeditpassword.CreateEditPasswordFragment"
+        android:label="fragment_create_edit_password"
+        tools:layout="@layout/fragment_create_edit_password" />
+
+</navigation>
